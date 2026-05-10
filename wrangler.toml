@@ -1,0 +1,11 @@
+name = "thai-farang-api"
+main = "src/index.ts"
+compatibility_date = "2026-05-10"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "production-db"
+database_id = "votre-id-d1"
+
+[vars]
+ENVIRONMENT = "production"
