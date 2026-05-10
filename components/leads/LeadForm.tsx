@@ -18,6 +18,8 @@ export function LeadForm({ locale, projectId }: Props) {
     "investor_thai",
   );
   const [message, setMessage] = useState("");
+  /** Honeypot (laisser vide) — rempli par les bots. */
+  const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "err">(
     "idle",
   );
@@ -39,6 +41,7 @@ export function LeadForm({ locale, projectId }: Props) {
           locale,
           message: message.trim() || undefined,
           project_id: projectId ?? undefined,
+          website: website.trim() || undefined,
         }),
       });
       const data = (await res.json().catch(() => ({}))) as {
@@ -46,7 +49,11 @@ export function LeadForm({ locale, projectId }: Props) {
       };
       if (!res.ok) {
         setStatus("err");
-        setErrMsg(data.error ?? t("leadForm.errorGeneric"));
+        if (res.status === 429) {
+          setErrMsg(t("leadForm.errorTooManyRequests"));
+        } else {
+          setErrMsg(data.error ?? t("leadForm.errorGeneric"));
+        }
         return;
       }
       setStatus("ok");
@@ -73,6 +80,16 @@ export function LeadForm({ locale, projectId }: Props) {
         </p>
       ) : (
         <form onSubmit={onSubmit} className="mt-4 space-y-4">
+          <input
+            type="text"
+            name="company_website"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+            className="absolute h-0 w-0 overflow-hidden opacity-0"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+          />
           <div>
             <label
               htmlFor="lead-email"

@@ -40,6 +40,9 @@ export function SiteHeader({ locale }: Props) {
           <Link className="hover:text-teal-600" href={`/${locale}/legal`}>
             {t("nav.legal")}
           </Link>
+          <Link className="hover:text-teal-600" href={`/${locale}/admin/login`}>
+            {t("nav.studio")}
+          </Link>
           <div className="flex items-center gap-1 border-l border-stone-300 pl-4 dark:border-stone-600">
             <Globe className="size-4 text-stone-500" aria-hidden />
             {locales.map(({ code, label }) => (

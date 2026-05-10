@@ -1,0 +1,3 @@
+# Copier vers `.dev.vars` pour `wrangler dev` sur l’API (non commité).
+# Minimum 32 caractères — doit matcher `wrangler secret put JWT_SECRET` en prod.
+JWT_SECRET=change_me_to_at_least_32_random_characters_please

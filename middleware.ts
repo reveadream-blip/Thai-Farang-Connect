@@ -47,6 +47,26 @@ export function middleware(request: NextRequest) {
 
   const locale = first;
 
+  if (segments[1] === "admin") {
+    const tail = segments.slice(2);
+    if (tail.length === 0) {
+      const url = request.nextUrl.clone();
+      url.pathname = `/${locale}/admin/projects`;
+      return NextResponse.redirect(url);
+    }
+    const publicAdmin =
+      tail[0] === "login" || tail[0] === "register";
+    if (!publicAdmin) {
+      const token = request.cookies.get("tf_token");
+      if (!token?.value) {
+        const url = request.nextUrl.clone();
+        url.pathname = `/${locale}/admin/login`;
+        url.searchParams.set("next", pathname);
+        return NextResponse.redirect(url);
+      }
+    }
+  }
+
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-locale", locale);
 

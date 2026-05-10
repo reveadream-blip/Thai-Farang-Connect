@@ -18,7 +18,8 @@
   "nav": {
     "investors": "Investors",
     "projects": "Projects",
-    "legal": "Legal"
+    "legal": "Legal",
+    "studio": "Studio"
   },
   "investorsPage": {
     "title": "Thai majority investors",
@@ -52,7 +53,46 @@
     "submit": "Send",
     "sending": "Sending…",
     "success": "Thank you — your request has been recorded.",
-    "errorGeneric": "Something went wrong. Try again later."
+    "errorGeneric": "Something went wrong. Try again later.",
+    "errorTooManyRequests": "Too many submissions. Please wait a minute and try again."
+  },
+  "adminPage": {
+    "loginTitle": "Entrepreneur login",
+    "loginLead": "Manage project drafts and publish when ready.",
+    "loginSubmit": "Sign in",
+    "loginLink": "Already have an account? Sign in",
+    "registerTitle": "Create entrepreneur account",
+    "registerHint": "For foreign entrepreneurs listing JV opportunities (Thai-majority structure). Investors use the interest form on the site.",
+    "registerSubmit": "Create account",
+    "registerLink": "Need an account? Register",
+    "password": "Password",
+    "passwordMin": "Password (min. 10 characters)",
+    "fullName": "Full name",
+    "nationality": "Nationality",
+    "projectsTitle": "Your projects",
+    "projectsLead": "Drafts stay private until you set status to published.",
+    "newProject": "New project",
+    "editProject": "Edit project",
+    "logout": "Sign out",
+    "titleEn": "Title (English)",
+    "titleTh": "Title (Thai)",
+    "descEn": "Description (English)",
+    "descTh": "Description (Thai)",
+    "industry": "Industry",
+    "optional": "Optional",
+    "status": {
+      "draft": "Draft",
+      "published": "Published",
+      "funded": "Funded",
+      "archived": "Archived"
+    },
+    "create": "Create draft",
+    "save": "Save",
+    "cancel": "Cancel",
+    "invalidNumber": "Invalid amount.",
+    "invalidEquity": "Equity must be between 1 and 100.",
+    "errorGeneric": "Something went wrong.",
+    "noProjects": "No projects yet. Create a draft to get started."
   },
   "legalPage": {
     "title": "Legal & compliance workflow",

@@ -8,6 +8,7 @@ binding = "DB"
 database_name = "thaifarangconnect"
 database_id = "91f57dfb-efe4-4649-8cd2-5c238d9cd191"
 
+# Secret requis pour JWT : `npx wrangler secret put JWT_SECRET` (min. 32 caractères).
 [vars]
 ENVIRONMENT = "production"
 # Origines autorisées pour les appels depuis le front Pages (séparateur virgule)

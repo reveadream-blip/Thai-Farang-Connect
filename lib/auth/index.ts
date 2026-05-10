@@ -1,5 +1,5 @@
 /**
- * Session / JWT verification for calls to the Workers API will live here.
+ * Auth : cookie httpOnly `tf_token` (routes `/api/auth/*`) + JWT HS256 côté Worker.
  */
 
 export {};

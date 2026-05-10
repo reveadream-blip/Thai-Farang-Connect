@@ -17,3 +17,8 @@ export type ApiProject = {
 export type ApiProjectsResponse = {
   projects: ApiProject[];
 };
+
+/** Réponse `GET /v1/manage/projects/:id` (inclut `owner_id`). */
+export type ApiManageProject = ApiProject & {
+  owner_id: string | null;
+};

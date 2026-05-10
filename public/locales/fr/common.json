@@ -18,7 +18,8 @@
   "nav": {
     "investors": "Investisseurs",
     "projects": "Projets",
-    "legal": "Juridique"
+    "legal": "Juridique",
+    "studio": "Studio"
   },
   "investorsPage": {
     "title": "Investisseurs majoritaires thaïlandais",
@@ -52,7 +53,46 @@
     "submit": "Envoyer",
     "sending": "Envoi…",
     "success": "Merci — votre demande a bien été enregistrée.",
-    "errorGeneric": "Une erreur s’est produite. Réessayez plus tard."
+    "errorGeneric": "Une erreur s’est produite. Réessayez plus tard.",
+    "errorTooManyRequests": "Trop de tentatives. Patientez une minute puis réessayez."
+  },
+  "adminPage": {
+    "loginTitle": "Connexion entrepreneur",
+    "loginLead": "Gérez vos brouillons et publiez quand vous êtes prêt.",
+    "loginSubmit": "Se connecter",
+    "loginLink": "Déjà un compte ? Connexion",
+    "registerTitle": "Créer un compte entrepreneur",
+    "registerHint": "Pour les entrepreneurs étrangers qui publient des opportunités (structure JV à majorité thaïlandaise). Les investisseurs utilisent le formulaire d’intérêt sur le site.",
+    "registerSubmit": "Créer le compte",
+    "registerLink": "Pas encore de compte ? Inscription",
+    "password": "Mot de passe",
+    "passwordMin": "Mot de passe (min. 10 caractères)",
+    "fullName": "Nom complet",
+    "nationality": "Nationalité",
+    "projectsTitle": "Vos projets",
+    "projectsLead": "Les brouillons restent privés tant que le statut n’est pas « publié ».",
+    "newProject": "Nouveau projet",
+    "editProject": "Modifier le projet",
+    "logout": "Déconnexion",
+    "titleEn": "Titre (anglais)",
+    "titleTh": "Titre (thaï)",
+    "descEn": "Description (anglais)",
+    "descTh": "Description (thaï)",
+    "industry": "Secteur",
+    "optional": "Optionnel",
+    "status": {
+      "draft": "Brouillon",
+      "published": "Publié",
+      "funded": "Financé",
+      "archived": "Archivé"
+    },
+    "create": "Créer un brouillon",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "invalidNumber": "Montant invalide.",
+    "invalidEquity": "La part doit être entre 1 et 100.",
+    "errorGeneric": "Une erreur s’est produite.",
+    "noProjects": "Aucun projet pour l’instant. Créez un brouillon pour commencer."
   },
   "legalPage": {
     "title": "Parcours juridique & conformité",
