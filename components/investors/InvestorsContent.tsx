@@ -3,7 +3,13 @@
 import { useTranslation } from "react-i18next";
 import { Landmark, ShieldCheck, FileCheck } from "lucide-react";
 
-export function InvestorsContent() {
+import { LeadForm } from "@/components/leads/LeadForm";
+
+type Props = {
+  locale: string;
+};
+
+export function InvestorsContent({ locale }: Props) {
   const { t } = useTranslation("common");
 
   const bullets = [
@@ -45,6 +51,8 @@ export function InvestorsContent() {
           {t("investorsPage.ctaBody")}
         </p>
       </section>
+
+      <LeadForm locale={locale} />
     </div>
   );
 }

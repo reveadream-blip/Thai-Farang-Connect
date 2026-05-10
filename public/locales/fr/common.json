@@ -37,7 +37,23 @@
     "count": "{{count}} annonces ouvertes",
     "cardLocation": "Lieu",
     "cardRaise": "Levée cible",
-    "cardEquity": "Majorité thaï (typ.)"
+    "cardEquity": "Majorité thaï (typ.)",
+    "cardListed": "Publié le",
+    "backToList": "← Retour aux projets",
+    "viewDetail": "Voir le détail"
+  },
+  "leadForm": {
+    "title": "Manifester son intérêt",
+    "subtitle": "Nous vous contacterons à l’ouverture de l’onboarding.",
+    "email": "E-mail",
+    "role": "Vous êtes",
+    "roleInvestor": "Investisseur thaï (partenaire majoritaire)",
+    "roleEntrepreneur": "Entrepreneur étranger",
+    "message": "Message (optionnel)",
+    "submit": "Envoyer",
+    "sending": "Envoi…",
+    "success": "Merci — votre demande a bien été enregistrée.",
+    "errorGeneric": "Une erreur s’est produite. Réessayez plus tard."
   },
   "legalPage": {
     "title": "Parcours juridique & conformité",

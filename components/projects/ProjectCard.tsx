@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 import type { ApiProject } from "@/lib/api/types";
@@ -64,6 +65,15 @@ export function ProjectCard({ project, locale }: Props) {
           <dd>{project.equity_offered ?? 51}%</dd>
         </div>
       </dl>
+
+      <p className="mt-4">
+        <Link
+          href={`/${locale}/projects/${project.id}`}
+          className="text-sm font-medium text-teal-700 hover:underline dark:text-teal-400"
+        >
+          {t("projectsPage.viewDetail")}
+        </Link>
+      </p>
     </article>
   );
 }

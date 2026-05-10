@@ -37,7 +37,23 @@
     "count": "{{count}} open listings",
     "cardLocation": "Location",
     "cardRaise": "Target raise",
-    "cardEquity": "Thai majority (typ.)"
+    "cardEquity": "Thai majority (typ.)",
+    "cardListed": "Listed",
+    "backToList": "← Back to projects",
+    "viewDetail": "View details"
+  },
+  "leadForm": {
+    "title": "Register interest",
+    "subtitle": "We will contact you when onboarding opens.",
+    "email": "Email",
+    "role": "You are",
+    "roleInvestor": "Thai investor (majority partner)",
+    "roleEntrepreneur": "Foreign entrepreneur",
+    "message": "Message (optional)",
+    "submit": "Send",
+    "sending": "Sending…",
+    "success": "Thank you — your request has been recorded.",
+    "errorGeneric": "Something went wrong. Try again later."
   },
   "legalPage": {
     "title": "Legal & compliance workflow",

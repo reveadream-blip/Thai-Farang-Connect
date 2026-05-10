@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Investors",
 };
 
-export default function InvestorsPage() {
-  return <InvestorsContent />;
+export default async function InvestorsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return <InvestorsContent locale={locale} />;
 }
