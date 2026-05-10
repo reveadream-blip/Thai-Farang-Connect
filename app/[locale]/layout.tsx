@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { I18nProvider } from "@/components/layout/I18nProvider";
+import { publicSiteUrl } from "@/lib/env/public";
 
-const baseUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://votre-domaine.com";
+const baseUrl = publicSiteUrl;
 
 type Props = {
   children: React.ReactNode;

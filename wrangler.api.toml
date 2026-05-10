@@ -1,0 +1,14 @@
+# Worker API (D1) — déployer avec : npm run deploy:api
+name = "thai-farang-api"
+main = "src/index.ts"
+compatibility_date = "2026-05-10"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "thaifarangconnect"
+database_id = "91f57dfb-efe4-4649-8cd2-5c238d9cd191"
+
+[vars]
+ENVIRONMENT = "production"
+# Origines autorisées pour les appels depuis le front Pages (séparateur virgule)
+ALLOWED_ORIGINS = "https://thai-farang-connect.pages.dev"

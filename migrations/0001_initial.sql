@@ -1,6 +1,6 @@
 -- Thai-Farang-Connect — Cloudflare D1 initial schema
 
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
     id TEXT PRIMARY KEY,
     email TEXT UNIQUE NOT NULL,
     password_hash TEXT NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE users (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE projects (
+CREATE TABLE IF NOT EXISTS projects (
     id TEXT PRIMARY KEY,
     owner_id TEXT REFERENCES users(id),
     title_en TEXT NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE projects (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE connections (
+CREATE TABLE IF NOT EXISTS connections (
     id TEXT PRIMARY KEY,
     project_id TEXT REFERENCES projects(id),
     investor_id TEXT REFERENCES users(id),
@@ -39,7 +39,7 @@ CREATE TABLE connections (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE legal_documents (
+CREATE TABLE IF NOT EXISTS legal_documents (
     id TEXT PRIMARY KEY,
     connection_id TEXT REFERENCES connections(id),
     doc_type TEXT CHECK(doc_type IN ('mou', 'joint_venture_agreement', 'shareholder_pact')),
@@ -48,5 +48,5 @@ CREATE TABLE legal_documents (
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE INDEX idx_project_location ON projects(location);
-CREATE INDEX idx_user_role ON users(role);
+CREATE INDEX IF NOT EXISTS idx_project_location ON projects(location);
+CREATE INDEX IF NOT EXISTS idx_user_role ON users(role);
