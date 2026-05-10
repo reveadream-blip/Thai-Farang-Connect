@@ -1,0 +1,8 @@
+# Utilisé par Cloudflare Pages (CI Git). Ne pas mélanger avec la config Worker OpenNext complète.
+# Wrangler lit ce fichier si aucun wrangler.json / wrangler.jsonc n’est présent à la racine.
+# Build Worker Next.js (manuel / CLI) : wrangler.opennext.jsonc
+
+name = "thai-farang-connect"
+pages_build_output_dir = "./.open-next/assets"
+compatibility_date = "2026-05-10"
+compatibility_flags = ["nodejs_compat"]

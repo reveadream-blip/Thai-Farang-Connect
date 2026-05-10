@@ -9,8 +9,8 @@
     "lint": "eslint",
     "deploy:api": "wrangler deploy -c wrangler.api.toml",
     "pages:build": "opennextjs-cloudflare build",
-    "pages:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "preview:cf": "opennextjs-cloudflare build && opennextjs-cloudflare preview"
+    "pages:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy --config wrangler.opennext.jsonc",
+    "preview:cf": "opennextjs-cloudflare build && opennextjs-cloudflare preview --config wrangler.opennext.jsonc"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.19.8",
