@@ -25,15 +25,14 @@
     "lead": "Opportunités structurées où les partenaires thaïlandais détiennent au moins 51 % — avec contrats rédigés par des cabinets agréés et une conformité traçable.",
     "b1": "Vérification des contreparties avant mise en relation : contrôle d'identité et clarté des rôles pour les profils investor_thai.",
     "b2": "Modèles de joint-venture alignés sur la pratique sociétaire thaïlandaise — du MOU aux pactes d'actionnaires.",
-    "b3": "Étapes de revue juridique suivies dans la plateforme avant tout engagement de capital.",
-    "ctaTitle": "Prochainement",
-    "ctaBody": "Onboarding investisseur, salles de deal et flux KYB seront branchés ici — la base de données et l'API sont prêtes."
+    "b3": "Étapes de revue juridique suivies dans la plateforme avant tout engagement de capital."
   },
   "projectsPage": {
     "title": "Opportunités publiées",
     "lead": "Synthèses validées d'entrepreneurs cherchant un partenaire thaï majoritaire ; les montants sont indicatifs jusqu'à la clôture juridique.",
     "emptyTitle": "Aucun projet publié",
-    "emptyBody": "Appliquez le seed SQL sur D1 ou publiez des brouillons depuis le flux admin une fois branché. L'API expose déjà GET /v1/projects.",
+    "emptyBody": "De nouvelles annonces apparaîtront ici après validation et publication.",
+    "statusPublished": "Publié",
     "count": "{{count}} annonces ouvertes",
     "cardLocation": "Lieu",
     "cardRaise": "Levée cible",

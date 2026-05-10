@@ -25,6 +25,7 @@ export function LeadForm({ locale, projectId }: Props) {
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (status === "loading") return;
     setStatus("loading");
     setErrMsg("");
     const base = publicApiUrl.replace(/\/$/, "");

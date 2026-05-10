@@ -171,13 +171,13 @@ const worker = {
 
         if (projectId) {
           const exists = await env.DB.prepare(
-            `SELECT id FROM projects WHERE id = ?`,
+            `SELECT id FROM projects WHERE id = ? AND status = 'published'`,
           )
             .bind(projectId)
             .first();
           if (!exists) {
             const res = Response.json(
-              { error: "Unknown project" },
+              { error: "Unknown or unpublished project" },
               { status: 400 },
             );
             return withCors(request, env, res);

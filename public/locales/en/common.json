@@ -25,15 +25,14 @@
     "lead": "Structured opportunities where Thai partners hold at least 51% — with contracts drafted by licensed firms and traceable compliance.",
     "b1": "Verify counterparties before introduction: ID checks and role clarity for investor_thai profiles.",
     "b2": "Joint-venture templates aligned with Thai corporate practice — MOU through shareholder agreements.",
-    "b3": "Legal review stages tracked in-platform before capital commitments.",
-    "ctaTitle": "Coming next",
-    "ctaBody": "Investor onboarding, deal rooms, and KYB workflows will plug into this section — the database and API layer are ready."
+    "b3": "Legal review stages tracked in-platform before capital commitments."
   },
   "projectsPage": {
     "title": "Published opportunities",
     "lead": "Vetted summaries from entrepreneurs seeking a Thai-majority partner; amounts are indicative until legal DD closes.",
     "emptyTitle": "No published projects yet",
-    "emptyBody": "Apply the SQL seed on D1 or publish drafts from the admin flow once wired. The API already exposes GET /v1/projects.",
+    "emptyBody": "New listings will appear here once they are reviewed and published.",
+    "statusPublished": "Published",
     "count": "{{count}} open listings",
     "cardLocation": "Location",
     "cardRaise": "Target raise",

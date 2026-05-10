@@ -2,10 +2,20 @@ import type { Metadata } from "next";
 
 import { ProjectsPageClient } from "@/components/projects/ProjectsPageClient";
 import { fetchPublishedProjects } from "@/lib/api/projects";
+import { commonForLocale } from "@/lib/i18n/commonBundle";
 
-export const metadata: Metadata = {
-  title: "Projects",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const c = commonForLocale(locale);
+  return {
+    title: c.projectsPage.title,
+    description: c.projectsPage.lead,
+  };
+}
 
 export default async function ProjectsPage({
   params,

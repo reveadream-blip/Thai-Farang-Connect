@@ -43,15 +43,6 @@ export function InvestorsContent({ locale }: Props) {
         ))}
       </ul>
 
-      <section className="rounded-xl border border-teal-200 bg-teal-50/60 p-6 dark:border-teal-900 dark:bg-teal-950/30">
-        <h2 className="font-semibold text-teal-900 dark:text-teal-200">
-          {t("investorsPage.ctaTitle")}
-        </h2>
-        <p className="mt-2 text-sm text-stone-700 dark:text-stone-300">
-          {t("investorsPage.ctaBody")}
-        </p>
-      </section>
-
       <LeadForm locale={locale} />
     </div>
   );
