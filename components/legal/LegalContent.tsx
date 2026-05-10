@@ -13,40 +13,40 @@ export function LegalContent() {
   ];
 
   return (
-    <div className="mx-auto max-w-3xl space-y-10 px-4 py-12">
+    <div className="mx-auto max-w-3xl space-y-10 px-4 py-14">
       <header>
-        <h1 className="text-3xl font-bold text-stone-900 dark:text-stone-50">
+        <h1 className="font-hero-title text-3xl font-bold text-slate-50 md:text-4xl">
           {t("legalPage.title")}
         </h1>
-        <p className="mt-3 text-lg text-stone-600 dark:text-stone-400">
+        <p className="mt-4 text-lg leading-relaxed text-slate-400">
           {t("legalPage.lead")}
         </p>
       </header>
 
-      <ol className="relative space-y-6 border-l border-stone-200 pl-6 dark:border-stone-700">
+      <ol className="relative space-y-6 border-l border-premium-gold/25 pl-6">
         {steps.map(({ icon: Icon, key }, i) => (
           <li key={key} className="relative">
-            <span className="absolute -left-[29px] flex size-8 items-center justify-center rounded-full bg-teal-100 text-sm font-semibold text-teal-800 dark:bg-teal-900 dark:text-teal-200">
+            <span className="absolute -left-[29px] flex size-8 items-center justify-center rounded-full border border-premium-gold/40 bg-premium-blue font-semibold text-sm text-premium-gold">
               {i + 1}
             </span>
-            <div className="flex gap-3">
-              <Icon className="mt-1 size-5 shrink-0 text-stone-500" />
-              <div>
-                <h2 className="font-semibold text-stone-900 dark:text-stone-100">
-                  {t(`legalPage.${key}Title`)}
-                </h2>
-                <p className="mt-1 text-sm text-stone-600 dark:text-stone-400">
-                  {t(`legalPage.${key}Body`)}
-                </p>
+            <div className="glass-card rounded-xl p-5 pl-4">
+              <div className="flex gap-3">
+                <Icon className="mt-1 size-5 shrink-0 text-premium-gold" aria-hidden />
+                <div>
+                  <h2 className="font-hero-title font-semibold text-slate-100">
+                    {t(`legalPage.${key}Title`)}
+                  </h2>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                    {t(`legalPage.${key}Body`)}
+                  </p>
+                </div>
               </div>
             </div>
           </li>
         ))}
       </ol>
 
-      <p className="text-sm text-stone-500 dark:text-stone-500">
-        {t("legalPage.disclaimer")}
-      </p>
+      <p className="text-sm text-slate-500">{t("legalPage.disclaimer")}</p>
     </div>
   );
 }

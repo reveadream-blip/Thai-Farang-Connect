@@ -19,26 +19,26 @@ export function InvestorsContent({ locale }: Props) {
   ];
 
   return (
-    <div className="mx-auto max-w-3xl space-y-10 px-4 py-12">
+    <div className="mx-auto max-w-3xl space-y-10 px-4 py-14">
       <header>
-        <h1 className="text-3xl font-bold text-stone-900 dark:text-stone-50">
+        <h1 className="font-hero-title text-3xl font-bold text-slate-50 md:text-4xl">
           {t("investorsPage.title")}
         </h1>
-        <p className="mt-3 text-lg text-stone-600 dark:text-stone-400">
+        <p className="mt-4 text-lg leading-relaxed text-slate-400">
           {t("investorsPage.lead")}
         </p>
       </header>
 
       <ul className="space-y-4">
         {bullets.map(({ icon: Icon, key }) => (
-          <li
-            key={key}
-            className="flex gap-4 rounded-lg border border-stone-200 bg-stone-50/80 p-4 dark:border-stone-700 dark:bg-stone-900/50"
-          >
-            <Icon className="mt-0.5 size-6 shrink-0 text-teal-600 dark:text-teal-400" />
-            <p className="text-stone-700 dark:text-stone-300">
-              {t(`investorsPage.${key}`)}
-            </p>
+          <li key={key}>
+            <div className="glass-card glass-card-hover flex gap-4 rounded-2xl p-5">
+              <Icon
+                className="mt-0.5 size-6 shrink-0 text-premium-gold"
+                aria-hidden
+              />
+              <p className="leading-relaxed text-slate-300">{t(`investorsPage.${key}`)}</p>
+            </div>
           </li>
         ))}
       </ul>

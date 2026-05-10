@@ -1,22 +1,120 @@
 @import "tailwindcss";
 
-:root {
-  --background: #fafaf9;
-  --foreground: #1c1917;
-  --accent: #0d9488;
-  --accent-muted: #ccfbf1;
+/* Premium Legal Connect — Thai Gold + Deep Royal Blue on slate-950 */
+@theme {
+  --color-premium-gold: #d4af37;
+  --color-premium-gold-light: #f5e6b8;
+  --color-premium-gold-dark: #b8860b;
+  --color-premium-blue: #1e3a8a;
+  --color-premium-blue-light: #2563eb;
+  --font-display: var(--font-montserrat), var(--font-inter), ui-sans-serif, system-ui,
+    sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0c0a09;
-    --foreground: #fafaf9;
-    --accent: #2dd4bf;
-    --accent-muted: #134e4a;
-  }
+:root {
+  --background: #020617;
+  --foreground: #f1f5f9;
+  --premium-gold: #d4af37;
+  --premium-blue: #1e3a8a;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Hero & accents */
+.gradient-text-premium {
+  background: linear-gradient(
+    135deg,
+    var(--premium-gold-light) 0%,
+    var(--premium-gold) 42%,
+    var(--premium-gold-dark) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text-hero {
+  background: linear-gradient(
+    90deg,
+    #fef9c3 0%,
+    #d4af37 35%,
+    #eab308 65%,
+    #ca8a04 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-mesh {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(212, 175, 55, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(30, 58, 138, 0.35), transparent),
+    radial-gradient(ellipse 50% 30% at 0% 80%, rgba(30, 58, 138, 0.2), transparent);
+}
+
+.btn-premium-primary {
+  background: linear-gradient(to right, #f59e0b, #eab308, #ca8a04);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 4px 24px rgba(212, 175, 55, 0.25);
+}
+
+.btn-premium-primary:hover {
+  background: linear-gradient(to right, #fbbf24, #facc15, #eab308);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25) inset,
+    0 6px 28px rgba(212, 175, 55, 0.35);
+}
+
+.btn-premium-secondary {
+  background: linear-gradient(
+    to right,
+    rgba(30, 58, 138, 0.95),
+    rgba(29, 78, 216, 0.9)
+  );
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 4px 24px rgba(30, 58, 138, 0.35);
+}
+
+.btn-premium-secondary:hover {
+  background: linear-gradient(
+    to right,
+    rgba(37, 99, 235, 0.95),
+    rgba(59, 130, 246, 0.85)
+  );
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.glass-card-hover {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(212, 175, 55, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.font-hero-title {
+  font-family: var(--font-montserrat), var(--font-inter), ui-sans-serif, system-ui,
+    sans-serif;
 }

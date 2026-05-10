@@ -14,7 +14,7 @@ export function BackToProjectsLink({ locale }: Props) {
     <p>
       <Link
         href={`/${locale}/projects`}
-        className="text-sm font-medium text-teal-700 hover:underline dark:text-teal-400"
+        className="text-sm font-semibold text-premium-gold transition hover:text-premium-gold-light"
       >
         {t("projectsPage.backToList")}
       </Link>

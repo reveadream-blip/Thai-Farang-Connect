@@ -22,37 +22,49 @@ export function SiteHeader({ locale }: Props) {
     pathname.replace(/^\/(en|fr|th)(?=\/|$)/, "") || "/";
 
   return (
-    <header className="border-b border-stone-200 bg-white/80 backdrop-blur dark:border-stone-800 dark:bg-stone-950/80">
-      <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl backdrop-saturate-150">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5">
         <Link
           href={`/${locale}`}
-          className="text-lg font-semibold tracking-tight text-teal-700 dark:text-teal-400"
+          className="font-hero-title text-base font-semibold tracking-tight text-premium-gold md:text-lg"
         >
           Thai-Farang-Connect
         </Link>
-        <nav className="flex flex-wrap items-center gap-4 text-sm font-medium text-stone-700 dark:text-stone-300">
-          <Link className="hover:text-teal-600" href={`/${locale}/investors`}>
+        <nav className="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-300 md:gap-4">
+          <Link
+            className="rounded-lg px-2 py-1 transition hover:bg-white/5 hover:text-premium-gold"
+            href={`/${locale}/investors`}
+          >
             {t("nav.investors")}
           </Link>
-          <Link className="hover:text-teal-600" href={`/${locale}/projects`}>
+          <Link
+            className="rounded-lg px-2 py-1 transition hover:bg-white/5 hover:text-premium-gold"
+            href={`/${locale}/projects`}
+          >
             {t("nav.projects")}
           </Link>
-          <Link className="hover:text-teal-600" href={`/${locale}/legal`}>
+          <Link
+            className="rounded-lg px-2 py-1 transition hover:bg-white/5 hover:text-premium-gold"
+            href={`/${locale}/legal`}
+          >
             {t("nav.legal")}
           </Link>
-          <Link className="hover:text-teal-600" href={`/${locale}/admin/login`}>
+          <Link
+            className="rounded-lg px-2 py-1 transition hover:bg-white/5 hover:text-premium-gold"
+            href={`/${locale}/admin/login`}
+          >
             {t("nav.studio")}
           </Link>
-          <div className="flex items-center gap-1 border-l border-stone-300 pl-4 dark:border-stone-600">
-            <Globe className="size-4 text-stone-500" aria-hidden />
+          <div className="flex items-center gap-1 border-l border-white/15 pl-3 md:pl-4">
+            <Globe className="size-4 text-slate-500" aria-hidden />
             {locales.map(({ code, label }) => (
               <Link
                 key={code}
                 href={`/${code}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`}
                 className={
                   code === locale
-                    ? "rounded bg-teal-100 px-2 py-0.5 text-teal-800 dark:bg-teal-900/50 dark:text-teal-200"
-                    : "rounded px-2 py-0.5 hover:bg-stone-100 dark:hover:bg-stone-800"
+                    ? "rounded-md bg-premium-gold/15 px-2 py-1 text-xs font-semibold text-premium-gold"
+                    : "rounded-md px-2 py-1 text-xs text-slate-400 hover:bg-white/5 hover:text-slate-200"
                 }
                 hrefLang={code}
               >

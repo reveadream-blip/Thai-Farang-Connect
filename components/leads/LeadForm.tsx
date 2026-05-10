@@ -11,6 +11,9 @@ type Props = {
   projectId?: string | null;
 };
 
+const inputCls =
+  "mt-1 w-full rounded-xl border border-white/10 bg-slate-950/40 px-3 py-2.5 text-slate-100 placeholder:text-slate-600 focus:border-premium-gold/45 focus:outline-none focus:ring-2 focus:ring-premium-gold/20";
+
 export function LeadForm({ locale, projectId }: Props) {
   const { t } = useTranslation("common");
   const [email, setEmail] = useState("");
@@ -18,7 +21,6 @@ export function LeadForm({ locale, projectId }: Props) {
     "investor_thai",
   );
   const [message, setMessage] = useState("");
-  /** Honeypot (laisser vide) — rempli par les bots. */
   const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "err">(
     "idle",
@@ -66,20 +68,18 @@ export function LeadForm({ locale, projectId }: Props) {
   }
 
   return (
-    <section className="rounded-xl border border-stone-200 bg-white p-6 shadow-sm dark:border-stone-700 dark:bg-stone-900">
-      <h2 className="text-lg font-semibold text-stone-900 dark:text-stone-50">
+    <section className="glass-card rounded-2xl p-6 md:p-8">
+      <h2 className="font-hero-title text-lg font-semibold text-slate-50">
         {t("leadForm.title")}
       </h2>
-      <p className="mt-1 text-sm text-stone-600 dark:text-stone-400">
-        {t("leadForm.subtitle")}
-      </p>
+      <p className="mt-2 text-sm text-slate-400">{t("leadForm.subtitle")}</p>
 
       {status === "ok" ? (
-        <p className="mt-4 rounded-lg bg-teal-50 px-4 py-3 text-sm text-teal-900 dark:bg-teal-950/50 dark:text-teal-200">
+        <p className="mt-6 rounded-xl border border-premium-gold/25 bg-premium-blue/35 px-4 py-3 text-sm text-premium-gold-light">
           {t("leadForm.success")}
         </p>
       ) : (
-        <form onSubmit={onSubmit} className="mt-4 space-y-4">
+        <form onSubmit={onSubmit} className="relative mt-6 space-y-5">
           <input
             type="text"
             name="company_website"
@@ -93,7 +93,7 @@ export function LeadForm({ locale, projectId }: Props) {
           <div>
             <label
               htmlFor="lead-email"
-              className="block text-sm font-medium text-stone-700 dark:text-stone-300"
+              className="block text-sm font-medium text-slate-300"
             >
               {t("leadForm.email")}
             </label>
@@ -104,30 +104,32 @@ export function LeadForm({ locale, projectId }: Props) {
               autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-stone-900 shadow-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500 dark:border-stone-600 dark:bg-stone-950 dark:text-stone-100"
+              className={inputCls}
             />
           </div>
 
           <fieldset>
-            <legend className="text-sm font-medium text-stone-700 dark:text-stone-300">
+            <legend className="text-sm font-medium text-slate-300">
               {t("leadForm.role")}
             </legend>
-            <div className="mt-2 flex flex-wrap gap-4">
-              <label className="flex items-center gap-2 text-sm">
+            <div className="mt-3 flex flex-wrap gap-5">
+              <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-300">
                 <input
                   type="radio"
                   name="role"
                   checked={role === "investor_thai"}
                   onChange={() => setRole("investor_thai")}
+                  className="border-white/20 text-premium-gold focus:ring-premium-gold/40"
                 />
                 {t("leadForm.roleInvestor")}
               </label>
-              <label className="flex items-center gap-2 text-sm">
+              <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-300">
                 <input
                   type="radio"
                   name="role"
                   checked={role === "entrepreneur_farang"}
                   onChange={() => setRole("entrepreneur_farang")}
+                  className="border-white/20 text-premium-gold focus:ring-premium-gold/40"
                 />
                 {t("leadForm.roleEntrepreneur")}
               </label>
@@ -137,7 +139,7 @@ export function LeadForm({ locale, projectId }: Props) {
           <div>
             <label
               htmlFor="lead-message"
-              className="block text-sm font-medium text-stone-700 dark:text-stone-300"
+              className="block text-sm font-medium text-slate-300"
             >
               {t("leadForm.message")}
             </label>
@@ -147,18 +149,18 @@ export function LeadForm({ locale, projectId }: Props) {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               maxLength={2000}
-              className="mt-1 w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-stone-900 shadow-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500 dark:border-stone-600 dark:bg-stone-950 dark:text-stone-100"
+              className={inputCls}
             />
           </div>
 
           {status === "err" && (
-            <p className="text-sm text-red-600 dark:text-red-400">{errMsg}</p>
+            <p className="text-sm text-red-400">{errMsg}</p>
           )}
 
           <button
             type="submit"
             disabled={status === "loading"}
-            className="rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700 disabled:opacity-50 dark:bg-teal-500 dark:hover:bg-teal-400"
+            className="btn-premium-primary rounded-xl px-6 py-3 text-sm font-semibold text-slate-950 transition disabled:opacity-50"
           >
             {status === "loading" ? t("leadForm.sending") : t("leadForm.submit")}
           </button>

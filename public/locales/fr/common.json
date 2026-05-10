@@ -1,7 +1,10 @@
 {
   "hero": {
     "title": "Investir en Thaïlande avec une sécurité juridique claire",
-    "subtitle": "Une plateforme de mise en relation encadrée reliant investisseurs thaïlandais majoritaires (51%) et entrepreneurs étrangers — business plans viables et joint-ventures relus par des avocats."
+    "subtitle": "Une plateforme de mise en relation encadrée reliant investisseurs thaïlandais majoritaires (51%) et entrepreneurs étrangers — business plans viables et joint-ventures relus par des avocats.",
+    "ctaInvest": "Investir (majorité thaï)",
+    "ctaPropose": "Proposer un projet",
+    "brandBadge": "Premium Legal Connect"
   },
   "sectionInvestors": {
     "title": "Investisseurs thaïlandais",
@@ -13,7 +16,27 @@
   },
   "trust": {
     "title": "Vérification et conformité avant tout",
-    "body": "Les profils et la conformité juridique sont contrôlés strictement pour rassurer les investisseurs thaïlandais sur la structure et les entrepreneurs sur le respect du cadre légal thaïlandais."
+    "body": "Les profils et la conformité juridique sont contrôlés strictement pour rassurer les investisseurs thaïlandais sur la structure et les entrepreneurs sur le respect du cadre légal thaïlandais.",
+    "barEyebrow": "Une gouvernance vérifiable",
+    "bar": {
+      "majority": {
+        "title": "Majorité thaïlandaise 51 %",
+        "body": "Structures alignées avec les JV conformes — le partenaire thaï conserve le contrôle là où la réglementation l'exige."
+      },
+      "legal": {
+        "title": "Documents relus par des avocats",
+        "body": "Du MOU aux pactes d'actionnaires — revus par des cabinets agréés avant tout engagement."
+      },
+      "verified": {
+        "title": "Conformité traçable",
+        "body": "Contrôles d'identité, rôles et étapes enregistrés pour une vision partagée entre investisseurs bangkokiens et fondateurs."
+      }
+    }
+  },
+  "landing": {
+    "feedTitle": "Opportunités à la une",
+    "feedLead": "Annonces sélectionnées cherchant un partenaire à majorité thaïlandaise — montants indicatifs jusqu'à la clôture juridique.",
+    "viewAll": "Tous les projets"
   },
   "nav": {
     "investors": "Investisseurs",

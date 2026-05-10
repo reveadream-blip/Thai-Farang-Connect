@@ -1,7 +1,10 @@
 {
   "hero": {
     "title": "Invest in Thailand with legal clarity",
-    "subtitle": "A regulated introduction platform connecting Thai majority investors (51%) with foreign entrepreneurs — viable business plans and lawyer-reviewed joint ventures."
+    "subtitle": "A regulated introduction platform connecting Thai majority investors (51%) with foreign entrepreneurs — viable business plans and lawyer-reviewed joint ventures.",
+    "ctaInvest": "Invest (Thai majority)",
+    "ctaPropose": "Propose a project",
+    "brandBadge": "Premium Legal Connect"
   },
   "sectionInvestors": {
     "title": "For Thai investors",
@@ -13,7 +16,27 @@
   },
   "trust": {
     "title": "Verification & compliance first",
-    "body": "Profiles and legal compliance are strictly verified so Thai investors can trust the structure, and entrepreneurs know agreements meet Thai regulatory expectations."
+    "body": "Profiles and legal compliance are strictly verified so Thai investors can trust the structure, and entrepreneurs know agreements meet Thai regulatory expectations.",
+    "barEyebrow": "Governance you can verify",
+    "bar": {
+      "majority": {
+        "title": "Thai-majority 51%",
+        "body": "Structures aligned with compliant JV practice — Thai partner holds control where regulations expect it."
+      },
+      "legal": {
+        "title": "Lawyer-reviewed docs",
+        "body": "Templates from MOU to shareholder agreements — reviewed by licensed counsel before commitments."
+      },
+      "verified": {
+        "title": "Traceable compliance",
+        "body": "Identity checks, roles, and workflow stages logged so Bangkok investors and founders share one source of truth."
+      }
+    }
+  },
+  "landing": {
+    "feedTitle": "Featured opportunities",
+    "feedLead": "Curated listings seeking a Thai-majority partner — amounts indicative until legal diligence closes.",
+    "viewAll": "View all projects"
   },
   "nav": {
     "investors": "Investors",
