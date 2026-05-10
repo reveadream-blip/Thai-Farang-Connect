@@ -1,6 +1,7 @@
-# Utilisé par Cloudflare Pages (CI Git). Ne pas mélanger avec la config Worker OpenNext complète.
-# Wrangler lit ce fichier si aucun wrangler.json / wrangler.jsonc n’est présent à la racine.
-# Build Worker Next.js (manuel / CLI) : wrangler.opennext.jsonc
+# Cloudflare Pages (CI Git uniquement) — pas de main/assets ici.
+# OpenNext Worker : wrangler.opennext.jsonc + flag --config sur la commande de build.
+# Ordre de découverte Wrangler : wrangler.json > wrangler.jsonc > wrangler.toml
+# → pas de wrangler.json(c) à la racine pour que ce fichier soit utilisé par Pages.
 
 name = "thai-farang-connect"
 pages_build_output_dir = "./.open-next/assets"
