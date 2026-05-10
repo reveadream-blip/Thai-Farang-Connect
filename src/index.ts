@@ -1,7 +1,7 @@
 /// <reference types="@cloudflare/workers-types" />
 
 /**
- * Cloudflare Worker API — D1, CORS pour https://thai-farang-connect.pages.dev
+ * Cloudflare Worker API — D1, CORS pour front Pages / Workers.
  */
 
 export interface Env {
@@ -11,8 +11,13 @@ export interface Env {
 }
 
 function parseAllowedOrigins(env: Env): string[] {
-  const fallback = "https://thai-farang-connect.pages.dev";
-  const raw = env.ALLOWED_ORIGINS ?? fallback;
+  const raw =
+    env.ALLOWED_ORIGINS ??
+    [
+      "https://thai-farang-connect.pages.dev",
+      "https://thai-farang-connect.contact-applimanagement.workers.dev",
+      "http://localhost:3000",
+    ].join(",");
   return raw
     .split(",")
     .map((s) => s.trim())
@@ -27,7 +32,10 @@ function corsForRequest(request: Request, env: Env): Headers {
     headers.set("Access-Control-Allow-Origin", origin);
     headers.set("Access-Control-Allow-Credentials", "true");
   }
-  headers.set("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
+  headers.set(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+  );
   headers.set(
     "Access-Control-Allow-Headers",
     "Content-Type, Authorization, X-Requested-With",
@@ -69,7 +77,29 @@ const worker = {
       return withCors(request, env, res);
     }
 
-    const plain = new Response("Thai-Farang API", {
+    if (request.method === "GET" && url.pathname === "/v1/projects") {
+      try {
+        const { results } = await env.DB.prepare(
+          `SELECT id, title_en, title_th, description_en, description_th,
+                  industry, location, required_investment, equity_offered, status, created_at
+           FROM projects
+           WHERE status = 'published'
+           ORDER BY created_at DESC
+           LIMIT 50`,
+        ).all();
+
+        const res = Response.json({
+          projects: results ?? [],
+        });
+        return withCors(request, env, res);
+      } catch (e) {
+        const msg = e instanceof Error ? e.message : "Database error";
+        const res = Response.json({ error: msg }, { status: 500 });
+        return withCors(request, env, res);
+      }
+    }
+
+    const plain = new Response("Thai-Farang API — try GET /health or GET /v1/projects", {
       headers: { "content-type": "text/plain;charset=UTF-8" },
     });
     return withCors(request, env, plain);

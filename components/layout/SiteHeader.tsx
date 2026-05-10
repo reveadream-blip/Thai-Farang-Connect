@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 import { Globe } from "lucide-react";
 
 const locales = [
@@ -15,6 +16,7 @@ type Props = {
 };
 
 export function SiteHeader({ locale }: Props) {
+  const { t } = useTranslation("common");
   const pathname = usePathname();
   const pathWithoutLocale =
     pathname.replace(/^\/(en|fr|th)(?=\/|$)/, "") || "/";
@@ -30,13 +32,13 @@ export function SiteHeader({ locale }: Props) {
         </Link>
         <nav className="flex flex-wrap items-center gap-4 text-sm font-medium text-stone-700 dark:text-stone-300">
           <Link className="hover:text-teal-600" href={`/${locale}/investors`}>
-            Investors
+            {t("nav.investors")}
           </Link>
           <Link className="hover:text-teal-600" href={`/${locale}/projects`}>
-            Projects
+            {t("nav.projects")}
           </Link>
           <Link className="hover:text-teal-600" href={`/${locale}/legal`}>
-            Legal
+            {t("nav.legal")}
           </Link>
           <div className="flex items-center gap-1 border-l border-stone-300 pl-4 dark:border-stone-600">
             <Globe className="size-4 text-stone-500" aria-hidden />

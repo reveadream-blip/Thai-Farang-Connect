@@ -11,4 +11,4 @@ database_id = "91f57dfb-efe4-4649-8cd2-5c238d9cd191"
 [vars]
 ENVIRONMENT = "production"
 # Origines autorisées pour les appels depuis le front Pages (séparateur virgule)
-ALLOWED_ORIGINS = "https://thai-farang-connect.pages.dev"
+ALLOWED_ORIGINS = "https://thai-farang-connect.pages.dev,https://thai-farang-connect.contact-applimanagement.workers.dev,http://localhost:3000"

@@ -14,5 +14,40 @@
   "trust": {
     "title": "Vérification et conformité avant tout",
     "body": "Les profils et la conformité juridique sont contrôlés strictement pour rassurer les investisseurs thaïlandais sur la structure et les entrepreneurs sur le respect du cadre légal thaïlandais."
+  },
+  "nav": {
+    "investors": "Investisseurs",
+    "projects": "Projets",
+    "legal": "Juridique"
+  },
+  "investorsPage": {
+    "title": "Investisseurs majoritaires thaïlandais",
+    "lead": "Opportunités structurées où les partenaires thaïlandais détiennent au moins 51 % — avec contrats rédigés par des cabinets agréés et une conformité traçable.",
+    "b1": "Vérification des contreparties avant mise en relation : contrôle d'identité et clarté des rôles pour les profils investor_thai.",
+    "b2": "Modèles de joint-venture alignés sur la pratique sociétaire thaïlandaise — du MOU aux pactes d'actionnaires.",
+    "b3": "Étapes de revue juridique suivies dans la plateforme avant tout engagement de capital.",
+    "ctaTitle": "Prochainement",
+    "ctaBody": "Onboarding investisseur, salles de deal et flux KYB seront branchés ici — la base de données et l'API sont prêtes."
+  },
+  "projectsPage": {
+    "title": "Opportunités publiées",
+    "lead": "Synthèses validées d'entrepreneurs cherchant un partenaire thaï majoritaire ; les montants sont indicatifs jusqu'à la clôture juridique.",
+    "emptyTitle": "Aucun projet publié",
+    "emptyBody": "Appliquez le seed SQL sur D1 ou publiez des brouillons depuis le flux admin une fois branché. L'API expose déjà GET /v1/projects.",
+    "count": "{{count}} annonces ouvertes",
+    "cardLocation": "Lieu",
+    "cardRaise": "Levée cible",
+    "cardEquity": "Majorité thaï (typ.)"
+  },
+  "legalPage": {
+    "title": "Parcours juridique & conformité",
+    "lead": "Documentation suivie de bout en bout pour aligner parties thaïlandaises et étrangères — pas un avis juridique ; mandatez un conseil pour votre opération.",
+    "s1Title": "Term sheet & MOU",
+    "s1Body": "Définir périmètre, gouvernance et exclusivité avant engagement substantiel.",
+    "s2Title": "Contrat de joint-venture",
+    "s2Body": "Appels de fonds, sièges au conseil, résolution des litiges et garanties de majorité thaïlandaise.",
+    "s3Title": "Signatures & dépôts",
+    "s3Body": "Ordre de signature pour parties thaï et étrangères ; statuts de brouillon → signé → complété.",
+    "disclaimer": "Information générale uniquement — faites appel à des avocats qualifiés en Thaïlande pour un conseil contraignant."
   }
 }

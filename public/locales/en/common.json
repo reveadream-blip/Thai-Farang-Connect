@@ -14,5 +14,40 @@
   "trust": {
     "title": "Verification & compliance first",
     "body": "Profiles and legal compliance are strictly verified so Thai investors can trust the structure, and entrepreneurs know agreements meet Thai regulatory expectations."
+  },
+  "nav": {
+    "investors": "Investors",
+    "projects": "Projects",
+    "legal": "Legal"
+  },
+  "investorsPage": {
+    "title": "Thai majority investors",
+    "lead": "Structured opportunities where Thai partners hold at least 51% — with contracts drafted by licensed firms and traceable compliance.",
+    "b1": "Verify counterparties before introduction: ID checks and role clarity for investor_thai profiles.",
+    "b2": "Joint-venture templates aligned with Thai corporate practice — MOU through shareholder agreements.",
+    "b3": "Legal review stages tracked in-platform before capital commitments.",
+    "ctaTitle": "Coming next",
+    "ctaBody": "Investor onboarding, deal rooms, and KYB workflows will plug into this section — the database and API layer are ready."
+  },
+  "projectsPage": {
+    "title": "Published opportunities",
+    "lead": "Vetted summaries from entrepreneurs seeking a Thai-majority partner; amounts are indicative until legal DD closes.",
+    "emptyTitle": "No published projects yet",
+    "emptyBody": "Apply the SQL seed on D1 or publish drafts from the admin flow once wired. The API already exposes GET /v1/projects.",
+    "count": "{{count}} open listings",
+    "cardLocation": "Location",
+    "cardRaise": "Target raise",
+    "cardEquity": "Thai majority (typ.)"
+  },
+  "legalPage": {
+    "title": "Legal & compliance workflow",
+    "lead": "Documentation tracked end-to-end so Thai and foreign parties stay aligned — not legal advice; engage counsel for your deal.",
+    "s1Title": "Term sheet & MOU",
+    "s1Body": "Define scope, governance, and exclusivity before substantive spend.",
+    "s2Title": "Joint-venture agreement",
+    "s2Body": "Capital calls, board seats, dispute resolution, and Thai-majority safeguards.",
+    "s3Title": "Signatures & filings",
+    "s3Body": "Ordered signing for Thai and foreign parties; status moves from draft → signed → completed.",
+    "disclaimer": "General information only — retain Thai-qualified lawyers for binding advice."
   }
 }
