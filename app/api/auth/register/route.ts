@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
 
-import { publicApiUrl } from "@/lib/env/public";
+import { apiFetch } from "@/lib/server/apiFetch";
 
 export async function POST(req: Request) {
   const body = await req.text();
-  const base = publicApiUrl.replace(/\/$/, "");
-  const res = await fetch(`${base}/v1/auth/register`, {
+  const res = await apiFetch("/v1/auth/register", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body,

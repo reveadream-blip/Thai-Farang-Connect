@@ -109,6 +109,20 @@ const worker = {
 
     const url = new URL(request.url);
 
+    if (request.method === "GET" && url.pathname === "/") {
+      const res = Response.json(
+        {
+          service: "thai-farang-api",
+          site: "https://thai-farang-connect.contact-applimanagement.workers.dev",
+          health: "/health",
+        },
+        {
+          headers: { "content-type": "application/json;charset=UTF-8" },
+        },
+      );
+      return withCors(request, env, res);
+    }
+
     if (request.method === "GET" && url.pathname === "/health") {
       const res = Response.json({
         ok: true,

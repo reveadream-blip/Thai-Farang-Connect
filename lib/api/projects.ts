@@ -1,13 +1,9 @@
 import type { ApiProject } from "@/lib/api/types";
-import { publicApiUrl } from "@/lib/env/public";
-
-function apiBase() {
-  return publicApiUrl.replace(/\/$/, "");
-}
+import { apiFetch } from "@/lib/server/apiFetch";
 
 export async function fetchPublishedProjects(): Promise<ApiProject[]> {
   try {
-    const res = await fetch(`${apiBase()}/v1/projects`, {
+    const res = await apiFetch("/v1/projects", {
       next: { revalidate: 60 },
       headers: { Accept: "application/json" },
     });
@@ -24,7 +20,7 @@ export async function fetchPublishedProjectById(
 ): Promise<ApiProject | null> {
   const safeId = encodeURIComponent(id);
   try {
-    const res = await fetch(`${apiBase()}/v1/projects/${safeId}`, {
+    const res = await apiFetch(`/v1/projects/${safeId}`, {
       next: { revalidate: 60 },
       headers: { Accept: "application/json" },
     });

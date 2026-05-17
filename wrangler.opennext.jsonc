@@ -10,5 +10,15 @@
 	"assets": {
 		"directory": ".open-next/assets",
 		"binding": "ASSETS"
-	}
+	},
+	"services": [
+		{
+			"binding": "WORKER_SELF_REFERENCE",
+			"service": "thai-farang-connect"
+		},
+		{
+			"binding": "THAI_FARANG_API",
+			"service": "thai-farang-api"
+		}
+	]
 }
