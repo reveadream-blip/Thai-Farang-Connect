@@ -19,16 +19,48 @@ export async function generateMetadata({
   return {
     metadataBase: new URL(baseUrl),
     title:
-      "Invest in Thailand | Connection Platform Farang-Thai",
+      locale === "fr"
+        ? "Investir en Thaïlande | Farang-Thai Connect"
+        : locale === "th"
+          ? "ลงทุนในไทย | Farang-Thai Connect"
+          : "Invest in Thailand | Farang-Thai Connect",
     description:
-      "Plateforme légale de mise en relation pour investisseurs thaïlandais (51%) et entrepreneurs étrangers. Sécurité juridique et business plans viables.",
+      locale === "fr"
+        ? "Plateforme de mise en relation pour investisseurs thaïlandais et entrepreneurs étrangers. Cadre clair, business plans viables."
+        : "Legal matching platform for Thai investors (51%) and foreign entrepreneurs. Clear framework and viable business plans.",
     alternates: {
       canonical: `/${locale}`,
       languages: {
         "en-US": `${baseUrl}/en`,
         "th-TH": `${baseUrl}/th`,
         "fr-FR": `${baseUrl}/fr`,
+        "x-default": `${baseUrl}/en`,
       },
+    },
+    openGraph: {
+      type: "website",
+      url: `${baseUrl}/${locale}`,
+      siteName: "Farang-Thai Connect",
+      title:
+        locale === "fr"
+          ? "Investir en Thaïlande | Farang-Thai Connect"
+          : "Invest in Thailand | Farang-Thai Connect",
+      description:
+        locale === "fr"
+          ? "Mise en relation investisseurs thaïlandais et entrepreneurs étrangers."
+          : "Match Thai investors with foreign entrepreneurs.",
+      locale: locale === "fr" ? "fr_FR" : locale === "th" ? "th_TH" : "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title:
+        locale === "fr"
+          ? "Investir en Thaïlande | Farang-Thai Connect"
+          : "Invest in Thailand | Farang-Thai Connect",
+      description:
+        locale === "fr"
+          ? "Mise en relation investisseurs thaïlandais et entrepreneurs étrangers."
+          : "Match Thai investors with foreign entrepreneurs.",
     },
     other: {
       "geo.region": "TH-10",
